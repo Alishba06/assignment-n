@@ -1,3 +1,4 @@
+
 'use client';
 import {
   UserGroupIcon,
@@ -22,6 +23,8 @@ const links = [
 
 export default function NavLinks() {
   const pathname = usePathname();
+
+
   return (
     <>
       {links.map((link) => {
@@ -36,9 +39,7 @@ export default function NavLinks() {
                 'bg-sky-100 text-blue-600':pathname === link.href
               },
             )}
-          >console.log('Rendering NavLinks component');
-console.log('Current pathname:', pathname);
-console
+          >
             <LinkIcon className="w-6" />
             <p className="hidden md:block">{link.name}</p>
           </Link>
